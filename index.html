@@ -9,32 +9,29 @@
 </head>
 <body>
     <div id="navbar">
-        <img src="logooooo.png" alt="">
-        <div id="nav-links">
-            <h3 id="text1">Home</h3>
-            <h3 id="text2">About</h3>
-            <h3 id="text3">Properties</h3>
-            <h3 id="text4">Buy</h3>
-            <h3 id="text5">Rent</h3>
-            <h3 id="text6">Contact</h3>
-        </div>
+    <img src="logooooo.png" alt="EstateVista Logo">
+    <div id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#featured-properties">Properties</a>
+        <a href="#buy-home">Buy</a>
+        <a href="#buy-home">Rent</a>
+        <a href="#contact">Contact</a>
     </div>
+</div>
     <div id="home">
         <div id="home-text">
             <h1>Welcome to EstateVista</h1>
             <h2>Your Dream Home, Our Priority</h2>
             <p>Find the perfect property for a better tomorrow with EstateVista.</p>
-            <button>Explore Properties</button>
+            <button class="scroll-properties">Explore Properties</button>
         </div>
     </div>
     <div id="description-section">
-
         <div id="description-image">
             <img src="des.jfif" alt="Luxury Building">
         </div>
-
         <div id="description-content">
-
             <h4>ABOUT ESTATEVISTA</h4>
 
             <h2>
@@ -55,15 +52,15 @@
                 the most desirable locations.
             </p>
 
-            <div id="features">
+          <div id="description-features">
 
-                <p>◆ Premium Properties</p>
-                <p>◆ Prime Locations</p>
-                <p>◆ Trusted Service</p>
-                <p>◆ Personal Guidance</p>
+    <p>◆ Premium Properties</p>
+    <p>◆ Prime Locations</p>
+    <p>◆ Trusted Service</p>
+    <p>◆ Personal Guidance</p>
 
-            </div>
-        </div>
+</div>
+</div>
         </div>
     </div>
     <section id="about">
@@ -80,14 +77,14 @@
             residential and commercial properties with a focus on
             quality, trust, and customer satisfaction.
         </p>
-        <button>Learn More</button>
+        <button class="scroll-contact">Learn More</button>
     </div>
     <div id="about-image">
         <img src="about.jfif" alt="EstateVista Luxury Property">
     </div>
 </section>
     
-<div id="features">
+<div id="featured-properties">
 
     <h2>Featured Properties</h2>
     <div id="property-container">
@@ -102,7 +99,7 @@
                     <li>Price: PKR 4.5 Crore</li>
                     <li>5 Bedrooms | 4 Bathrooms</li>
                 </ul>
-                <button>View Details</button>
+              <button class="view-details">View Details</button>
             </div>
         </div>
 
@@ -116,7 +113,7 @@
                     <li>Price: PKR 2.5 Crore</li>
                     <li>3 Bedrooms | 2 Bathrooms</li>
                 </ul>
-                <button>View Details</button>
+                <button class="view-details">View Details</button>
             </div>
         </div>
         <div class="property-card">
@@ -128,15 +125,12 @@
                     <li>Price: PKR 6 Crore</li>
                     <li>6 Bedrooms | 5 Bathrooms</li>
                 </ul>
-                <button>View Details</button>
+                <button class="view-details">View Details</button>
             </div>
         </div>
 
     </div>
 </div>
-
-<!-- FIND A HOME TO BUY SECTION -->
-
 <section id="buy-home">
     <div id="buy-content">
         <h2>Find a Home to Buy</h2>
@@ -146,7 +140,7 @@
             to luxurious villas, find the perfect place to
             build your future.
         </p>
-        <button>Explore Homes</button>
+       <button class="scroll-properties">Explore Homes</button>
     </div>
     <div id="buy-image">
         <img src="buy.jfif" alt="Luxury Home">
@@ -187,37 +181,42 @@
             </p>
 
         </div>
+       
+<div id="contact-form">
 
-        <!-- RIGHT CONTACT FORM -->
+    <h2>Send Us a Message</h2>
 
-        <div id="contact-form">
+    <form id="estate-contact-form">
 
-            <h2>Send Us a Message</h2>
+        <input type="text"
+            name="name"
+            placeholder="Your Name"
+            required>
 
-            <form>
+        <input type="email"
+            name="email"
+            placeholder="Your Email"
+            required>
 
-                <input type="text"
-                placeholder="Your Name" required>
+        <input type="text"
+            name="subject"
+            placeholder="Subject"
+            required>
 
-                <input type="email"
-                placeholder="Your Email" required>
+        <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required></textarea>
 
-                <input type="text"
-                placeholder="Subject" required>
+        <button type="submit">
+            Send Message
+        </button>
 
-                <textarea
-                placeholder="Your Message"
-                rows="5" required></textarea>
+    </form>
 
-                <button type="submit">
-                    Send Message
-                </button>
+</div>
 
-            </form>
-
-        </div>
-
-    </div>
 
 </section>
 
@@ -231,12 +230,14 @@
         Explore properties, discover opportunities,
         and find the perfect place to call home.
     </p>
-
-    <div id="footer-bottom">
+          <div id="footer-bottom">
         <p>
-            © 2026 EstateVista. All Rights Reserved.
+            © <span id="current-year"></span> EstateVista. All Rights Reserved.
         </p>
     </div>
 
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

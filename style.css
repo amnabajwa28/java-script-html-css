@@ -1,16 +1,21 @@
+body {
+    background-color: #5D5448;
+    padding-top: 85px;
+}
 #navbar {
-    position: relative;
+    position: fixed;
+    top: 10px;
+    left: 1%;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: 98%;
     height: 65px;
-
-    background-color:black;
-    margin: 10px auto;
+    background-color: black;
+    margin: 0 auto;
     padding: 5px 25px;
-
     border: 2px solid #E8BE65;
     border-radius: 20px;
     box-sizing: border-box;
@@ -26,18 +31,18 @@
     align-items: center;
     gap: 25px;
 }
-
-#nav-links h3 {
+#nav-links a {
     color: #E8BE65;
     font-size: 16px;
     font-weight: bold;
-    margin: 0;
+    text-decoration: none;
     cursor: pointer;
     white-space: nowrap;
-}
-#nav-links h3:hover {
-    color: white;
     transition: 0.3s;
+}
+
+#nav-links a:hover {
+    color: white;
 }
    #home {
     background-image:
@@ -73,7 +78,6 @@
     color: white;
     position: relative;
 }
-
 /* MAIN HEADING */
 #home-text h1 {
     color: #E8BE65;
@@ -169,13 +173,14 @@
     font-size: 17px;
     line-height: 1.9;
 }
-#features {
+#description-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
     margin-top: 25px;
 }
-#features p {
+
+#description-features p {
     color: #E8BE65;
     font-size: 16px;
 }
@@ -235,7 +240,7 @@
     object-fit: cover;
     display: block;
 }
-#features {
+#featured-properties {
     display: block;
     width: 98%;
     margin: 50px auto;
@@ -247,7 +252,8 @@
 
     box-sizing: border-box;
 }
-#features > h2 {
+
+#featured-properties > h2 {
     color: #D4AF63;
     text-align: center;
     font-size: 42px;
@@ -550,4 +556,83 @@
     #footer > p {
         font-size: 14px;
     }
+}
+body {
+    padding-top: 85px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section,
+#featured-properties {
+    scroll-margin-top: 90px;
+}
+
+#property-details {
+    width: 85%;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #111111;
+    border: 2px solid #D4AF63;
+    border-radius: 25px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#property-title {
+    color: #E8BE65;
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+#property-image {
+    width: 85%;
+    height: 400px;
+    object-fit: cover;
+    border: 2px solid #D4AF63;
+    border-radius: 20px;
+}
+
+#property-info {
+    color: white;
+    font-size: 20px;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+#property-info button {
+    background-color: #D4AF63;
+    color: black;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#property-info button:hover {
+    background-color: #E8BE65;
+}
+/* LIGHT NUDE BACKGROUND */
+
+body.details-page {
+    background-color: #F5EBDD;
+    margin: 0;
+    padding-top: 0;
+}
+
+#property-details {
+    background-color: #FFF9F0;
+    border: 2px solid #D4AF63;
+}
+
+#property-title {
+    color: #B58A42;
+}
+
+#property-info {
+    color: #333333;
 }

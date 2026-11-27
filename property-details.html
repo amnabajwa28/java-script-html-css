@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Property Details - EstateVista</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="details-page">
+
+    <section id="property-details">
+
+        <h1 id="property-title">Property Details</h1>
+
+        <img id="property-image" src="" alt="Property Image">
+
+        <div id="property-info">
+            <p id="property-description"></p>
+
+            <a href="index.html#contact">
+                <button type="button">Contact</button>
+            </a>
+        </div>
+
+    </section>
+
+    <script>
+
+        let params = new URLSearchParams(window.location.search);
+
+        let title = params.get("title");
+        let details = params.get("details");
+        let image = params.get("image");
+
+        document.getElementById("property-title").innerText = title || "Property Details";
+
+        document.getElementById("property-description").innerText = details || "";
+
+        if (image) {
+            document.getElementById("property-image").src = image;
+        }
+
+    </script>
+
+</body>
+</html>
